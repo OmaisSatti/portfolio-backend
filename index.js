@@ -12,7 +12,6 @@ app.use(cors());
 // Email Route
 app.post("/send-email", async (req, res) => {
   const { firstName, lastName, email, phone, service, message } = req.body;
-  console.log('request body is here: ',req.body)
   try {
     const transporter = nodemailer.createTransport({
       service: "Gmail",
